@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: root-app
+  annotations:
+    app-repo-url: https://github.com/TerryYin1777/corn-field-k8s.git
+  namespace: argo
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/TerryYin1777/corn-field-k8s.git
+    targetRevision: HEAD
+    path: child-apps
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo
