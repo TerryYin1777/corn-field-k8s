@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/TerryYin1777/corn-field-k8s.git
     targetRevision: HEAD
-    path: child-apps
+    path: argocd/child-apps
     directory:
       recurse: true
   destination:
