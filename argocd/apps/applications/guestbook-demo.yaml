@@ -1,18 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-app
+  name: guestbook
+  namespace: argo
   annotations:
     app-repo-url: https://github.com/TerryYin1777/corn-field-k8s.git
-  namespace: argo
 spec:
-  project: default
+  project: corn-field-k8s
   source:
+    path: deployment-manifests/guestbook
     repoURL: https://github.com/TerryYin1777/corn-field-k8s.git
     targetRevision: HEAD
-    path: argocd/child-apps
-    directory:
-      recurse: true
   destination:
     server: https://kubernetes.default.svc
-    namespace: argo
+    namespace: guestbook
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
