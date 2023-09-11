@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: jupyterhub
-  namespace: jupyterhub
+  namespace: argo
   annotations:
     app-repo-url: https://github.com/TerryYin1777/corn-field-k8s.git
 spec:
