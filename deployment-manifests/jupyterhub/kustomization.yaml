@@ -7,3 +7,5 @@ helmCharts:
     repo: https://hub.jupyter.org/helm-chart/
     releaseName: jupyterhub
     valuesFile: values.yaml
+resources:
+  - namespace.yaml
