@@ -705,11 +705,11 @@ ingress:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true" # ssl termination is done before reaching this
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
   hosts:
-  - jupyterhub.prod.k8s.corn-field.com
+  - jupyterhub.dev.k8s.corn-field.com
   tls:
-  - secretName: jupyterhub-prod-k8s-corn-field-com
+  - secretName: jupyterhub-dev-k8s-corn-field-com
     hosts:
-      - jupyterhub.prod.k8s.corn-field.com
+      - jupyterhub.dev.k8s.corn-field.com
 
 # ingress:
 #   pathSuffix:
