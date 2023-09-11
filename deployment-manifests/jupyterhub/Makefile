@@ -12,6 +12,7 @@ repo:
 # or assume a service account that has same permission
 template:
 	helm template \
+	--namespace ${NAMESPACE} \
 	--repo ${CHART_URL} \
 	--version ${VERSION} \
 	--release-name ${RELEASE_NAME} \
