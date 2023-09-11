@@ -1,0 +1,9 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+namespace: jupyterhub
+helmCharts:
+  - name: jupyterhub
+    version: 3.0.3
+    repo: https://hub.jupyter.org/helm-chart/
+    releaseName: jupyterhub
+    valuesFile: values.yaml
