@@ -35,7 +35,14 @@ hub:
   config:
     JupyterHub:
       admin_access: true
-      authenticator_class: dummy
+      authenticator_class: google
+    GoogleOAuthenticator:
+      client_id: 1027156467222-hksebubjhhpl2gr31kor46phutvs1scv.apps.googleusercontent.com
+      client_secret: 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
+      oauth_callback_url: https://jupyterhub.dev.k8s.corn-field.com/hub/oauth_callback
+      # hosted_domain:
+      #   - your-university.edu
+      # login_service: Your university
   service:
     type: ClusterIP
     annotations: {}
