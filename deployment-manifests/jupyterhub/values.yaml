@@ -43,6 +43,10 @@ hub:
       # hosted_domain:
       #   - your-university.edu
       # login_service: Your university
+      admin_users:
+        - terryyin1777@gmail.com
+      allowed_users:
+        - terryyin1777@gmail.com
   service:
     type: ClusterIP
     annotations: {}
