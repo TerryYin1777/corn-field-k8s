@@ -83,15 +83,25 @@ hub:
   args: []
   extraConfig: {}
   extraFiles: {}
-  extraEnv: {}
+  extraEnv:
+    OAUTH_CLIENT_ID:
+      valueFrom:
+        secretKeyRef:
+          name: jupyterhub-google-oauth-creds
+          key: OAUTH_CLIENT_ID
+    OAUTH_CLIENT_SECRET:
+      valueFrom:
+        secretKeyRef:
+          name: jupyterhub-google-oauth-creds
+          key: OAUTH_CLIENT_SECRET
   extraContainers: []
-  extraVolumes:
-    - name: google-oauthenticator-creds
-      secret:
-        secretName: jupyterhub-google-oauth-creds
-  extraVolumeMounts:
-    - mountPath: /usr/local/etc/jupyterhub/creds/
-      name: google-oauthenticator-creds
+  # extraVolumes:
+  #   - name: google-oauthenticator-creds
+  #     secret:
+  #       secretName: jupyterhub-google-oauth-creds
+  # extraVolumeMounts:
+  #   - mountPath: /usr/local/etc/jupyterhub/creds/
+  #     name: google-oauthenticator-creds
   image:
     name: jupyterhub/k8s-hub
     tag: "3.0.3"
