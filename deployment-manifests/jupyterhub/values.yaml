@@ -90,8 +90,9 @@ hub:
       secret:
         secretName: jupyterhub-google-oauth-creds
   extraVolumeMounts:
-    - mountPath: /usr/local/etc/jupyterhub/secret/
+    - mountPath: /usr/local/etc/jupyterhub/
       name: google-oauthenticator-creds
+      subPath: jupyterhub-google-oauth-creds.json
   image:
     name: jupyterhub/k8s-hub
     tag: "3.0.3"
