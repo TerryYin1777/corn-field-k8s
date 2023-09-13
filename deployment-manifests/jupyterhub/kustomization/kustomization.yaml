@@ -4,3 +4,4 @@ namespace: jupyterhub
 resources:
   - deployment.yaml
   - namespace.yaml
+  - external-secrets.yaml
