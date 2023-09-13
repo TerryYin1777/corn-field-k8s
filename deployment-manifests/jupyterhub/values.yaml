@@ -85,8 +85,13 @@ hub:
   extraFiles: {}
   extraEnv: {}
   extraContainers: []
-  extraVolumes: []
-  extraVolumeMounts: []
+  extraVolumes:
+    - name: google-oauthenticator-creds
+      secret:
+        secretName: jupyterhub-google-oauth-creds
+  extraVolumeMounts:
+    - mountPath: /usr/local/etc/jupyterhub/google-oauthenticator-creds.json
+      name: google-oauthenticator-creds
   image:
     name: jupyterhub/k8s-hub
     tag: "3.0.3"
