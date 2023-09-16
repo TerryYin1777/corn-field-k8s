@@ -88,12 +88,12 @@ hub:
       valueFrom:
         secretKeyRef:
           name: jupyterhub-google-oauth-creds
-          key: OAUTH_CLIENT_ID
+          key: client-id
     OAUTH_CLIENT_SECRET:
       valueFrom:
         secretKeyRef:
           name: jupyterhub-google-oauth-creds
-          key: OAUTH_CLIENT_SECRET
+          key: client-secret
   extraContainers: []
   # extraVolumes:
   #   - name: google-oauthenticator-creds
