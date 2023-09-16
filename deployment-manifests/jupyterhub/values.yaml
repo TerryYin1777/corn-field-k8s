@@ -35,7 +35,17 @@ hub:
   config:
     JupyterHub:
       admin_access: true
-      authenticator_class: dummy
+      authenticator_class: google
+    GoogleOAuthenticator:
+      oauth_callback_url: https://jupyterhub.dev.k8s.corn-field.com/hub/oauth_callback
+      admin_users:
+        - terryyin1777@gmail.com
+      allowed_users:
+        - terryyin1777@gmail.com
+  # config:
+  #   JupyterHub:
+  #     admin_access: true
+  #     authenticator_class: dummy
   service:
     type: ClusterIP
     annotations: {}
