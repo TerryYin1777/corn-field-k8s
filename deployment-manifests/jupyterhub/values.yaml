@@ -465,6 +465,7 @@ singleuser:
       description: "If you want the flexibility of creating your own conda env"
       kubespawner_override:
         image: terryyin1777/custom-conda-envs:latest
+        pullPolicy: Always
         lifecycle_hooks:
           postStart:
             exec:
