@@ -472,7 +472,7 @@ singleuser:
                 - "sh"
                 - "-c"
                 - >
-                  cp /tmp/.condarc $HOME/.condarc
+                  cp /tmp/.condarc /home/jovyan/
     - display_name: "Datascience environment"
       description: "If you want the additional bells and whistles: Python, R, and Julia."
       kubespawner_override:
