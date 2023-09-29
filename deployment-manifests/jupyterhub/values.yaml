@@ -461,6 +461,10 @@ singleuser:
     - display_name: "Minimal environment"
       description: "To avoid too much bells and whistles: Python."
       default: true
+    - display_name: "User Customized Conda environment"
+      description: "If you want the flexibility of creating your own conda env"
+      kubespawner_override:
+        image: terryyin1777/custom-conda-envs:latest
     - display_name: "Datascience environment"
       description: "If you want the additional bells and whistles: Python, R, and Julia."
       kubespawner_override:
