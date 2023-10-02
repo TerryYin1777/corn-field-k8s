@@ -420,7 +420,7 @@ singleuser:
   allowPrivilegeEscalation: false
   uid: 1000
   fsGid: 100
-  serviceAccountName:
+  serviceAccountName: jhub-singleuser
   storage:
     type: dynamic
     extraLabels: {}

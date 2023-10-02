@@ -5,3 +5,4 @@ resources:
   - deployment.yaml
   - namespace.yaml
   - external-secrets.yaml
+  - service-accounts.yaml
